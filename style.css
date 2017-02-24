@@ -2,7 +2,7 @@ body{
     margin:0;
 }
 #header{
-    width: 2000px;
+    width: 3000px;
     height: 200px;
     background-color: #0a2b1d;
 }
@@ -12,20 +12,21 @@ body{
     float: left;
     width: 200px;
     background-color: #1dc116;
-    height: 870px;
+    height: 1200px;
 }
 .row{
-    height: 290px;
-    width: 2000px;
+    height: 400px;
+    width: 3000px;
     background-color: #0f192a;
 }
-.container{
+.container {
     display: inline-block;
-    height: 220px;
-    width: 150px;
+    height: 264px;
+    width: 180px;
     background-color: #4a1e7f;
-    margin: 40px 0 0 40px;
+    margin: 60px;
+    margin-right: 0;
 }
 .show{
 
-}}
+}
