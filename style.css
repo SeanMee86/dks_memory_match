@@ -11,7 +11,6 @@ body{
     margin-right: 40px;
     float: left;
     width: 300px;
-    background-color: #1dc116;
     height: 1170px;
 }
 .row_health{
@@ -25,7 +24,7 @@ body{
 #row_container{
     background-image: url('images/background.jpg');
     background-size: cover;
-    background-position: -200px 0;
+    background-position: -350px 0;
     width: 1650px;
 }
 #health{
