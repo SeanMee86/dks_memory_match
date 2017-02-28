@@ -87,7 +87,7 @@ a:nth-child(2){
     height: 105px;
     width: 70px;
     object-fit: cover;
-    background-size: cover;
+    background-size: 70px 105px;
     border-radius: 10px;
     background-image: url("images/lady_maria.jpg");
     position: absolute;
