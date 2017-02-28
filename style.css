@@ -1,63 +1,109 @@
 body{
     margin:0;
+    font-family: darkFont;
+}
+@font-face {
+    font-family: darkFont;
+    src: url(Moonlight_Shadow.ttf);
 }
 #header{
-    width: 1650px;
-    height: 300px;
+    width: 850px;
+    height: 150px;
     background-color: #000000;
+    position: relative;
 }
-#side-nav{
+a{
+    font-size: 25px;
+    text-decoration: none;
+    left: 35px;
+    color: blanchedalmond;
+}
+a:first-child{
+    position: absolute;
+    top: 25px;
+    left: 32px;
+}
+a:nth-child(2){
+    position: absolute;
+    top: 80px;
+}
+#stats{
     margin-top: 0;
-    margin-right: 40px;
+    margin-right: 20px;
     float: left;
-    width: 300px;
-    height: 1170px;
+    width: 150px;
+    height: 585px;
+    background-color: rgba(240,255,250,0.41);
+    text-align: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
 }
 .row_health{
-    padding-top: 30px;
-    padding-left: 20px;
-    height: 120px;
-    width: 2000px;
+    padding-top: 15px;
+    padding-left: 10px;
+    height: 60px;
+    width: 850px;
     box-sizing: border-box;
 
 }
 #row_container{
     background-image: url('images/background.jpg');
     background-size: cover;
-    background-position: -350px 0;
-    width: 1650px;
+    background-position: -175px 0;
+    width: 850px;
+
 }
 #health{
-    height: 25px;
-    width: 700px;
+    height: 15px;
+    width: 350px;
     background-color: red;
-    margin: 0 0 20px 320px;
+    margin: 0 0 10px 160px;
     border: 2px solid #fff2fe;
 }
 #stamina{
-    margin: 20px 0 20px 320px;
-    height: 25px;
-    width: 450px;
+    margin: 10px 0 10px 160px;
+    height: 13px;
+    width: 225px;
     background-color: #1dc116;
     border: 2px solid #fff2fe;
 }
 .row{
-    height: 350px;
-    width: 2000px;
+    height: 175px;
+    width: 825px;
 }
 .container {
     display: inline-block;
-    height: 210px;
-    width: 140px;
+    height: 105px;
+    width: 70px;
     background-color: #4a1e7f;
-    margin: 60px 0 60px 60px;
+    margin: 30px 0 30px 30px;
     border-radius: 10px;
     border: 1px solid silver;
 }
+
+.front{
+    height: 105px;
+    width: 70px;
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 10px;
+    background-image: url("images/lady_maria.jpg");
+    position: absolute;
+}
+.back {
+    height: 105px;
+    width: 70px;
+    background-image: url("images/card_back.jpg");
+    background-size: cover;
+    background-position: -16px;
+    border-radius: 10px;
+    position: absolute;
+}
 #banner {
-    height: 200px;
-    margin-left: 400px;
-    margin-top: 50px;
+    height: 100px;
+    margin-left: 200px;
+    margin-top: 25px;
 }
 .show{
 

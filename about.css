@@ -1,0 +1,41 @@
+@font-face {
+    font-family: darkFont;
+    src: url(augusta-shadow.ttf);
+}
+body {
+    margin: 0;
+}
+#container{
+    width: 850px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: -400px 0;
+    height: 735px;
+    position: relative;
+}
+#header{
+    height: 100px;
+    padding: 10px;
+    background-color: black;
+}
+h1{
+    font-family: darkFont;
+    color: #830004;
+    text-align: center;
+}
+ul {
+    font-family: darkFont;
+    color: blanchedalmond;
+    font-size: 30px;
+}
+#chester {
+    height: 100px;
+    float: left;
+}
+#profile {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    height: 150px;
+    border-radius: 100px;
+}
