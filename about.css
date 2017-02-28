@@ -12,11 +12,14 @@ body {
     background-position: -400px 0;
     height: 735px;
     position: relative;
+    border-radius: 0 0 10px 0;
 }
 #header{
-    height: 100px;
-    padding: 10px;
+    height: 150px;
+    padding: 30px 10px 10px 10px;
     background-color: black;
+    box-sizing: border-box;
+    position: relative;
 }
 h1{
     font-family: darkFont;
@@ -28,9 +31,17 @@ ul {
     color: blanchedalmond;
     font-size: 30px;
 }
+a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
 #chester {
     height: 100px;
-    float: left;
+    margin-top: 20px;
+    position: absolute;
+    left: 10px;
+    top: 5px
+
 }
 #profile {
     position: absolute;
