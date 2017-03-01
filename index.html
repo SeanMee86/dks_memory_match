@@ -5,6 +5,23 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
     <script>
+        var count = 1;
+        var clickCount = 0;
+        $(document).ready(function(){
+            $('.container').click(function(){
+                $(this).find('.flip').addClass('flipped');
+
+                $('.reset').click(function(){
+                    $('.flipped').removeClass('flipped');
+                    $('.attempt .value').html("");
+                    clickCount =0;
+                });
+                clickCount++;
+                if(clickCount%2 === 0) {
+                    $('.attempt .value').text(count++);
+                }
+            });
+        });
 
     </script>
 </head>
@@ -37,80 +54,116 @@
         </div>
         <div class="row">
             <div class="container">
-                <div class="front" style="background-image: url(images/lady_maria.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/lady_maria.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/artorias.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/artorias.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Brador.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Brador.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Eileen.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Eileen.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/artorias.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/artorias.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Brador.jpg);"></div>
-                <!--<div class="back"></div>-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="container">
-                <div class="front" style="background-image: url(images/Iosefka.jpg);"></div>
-                <!--<div class="back"></div>-->
-            </div>
-            <div class="container">
-                <div class="front" style="background-image: url(images/Iosefka.jpg);"></div>
-                <!--<div class="back"></div>-->
-            </div>
-            <div class="container">
-                <div class="front" style="background-image: url(images/lady_maria.jpg);"></div>
-                <!--<div class="back"></div>-->
-            </div>
-            <div class="container">
-                <div class="front" style="background-image: url(images/Eileen.jpg);"></div>
-                <!--<div class="back"></div>-->
-            </div>
-            <div class="container">
-                <div class="front" style="background-image: url(images/Logan.jpg);"></div>
-                <!--<div class="back"></div>-->
-            </div>
-            <div class="container">
-                <div class="front" style="background-image: url(images/quelaag.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Brador.jpg);"></div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
-                <div class="front" style="background-image: url(images/Oscar.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/quelaag.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Ornstein.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/lady_maria.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Oscar.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Eileen.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Logan.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Logan.jpg);"></div>
+                </div>
             </div>
             <div class="container">
-                <div class="front" style="background-image: url(images/Ornstein.jpg);"></div>
-                <!--<div class="back"></div>-->
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/quelaag.jpg);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Oscar.jpg);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/quelaag.jpg);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Oscar.jpg);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Logan.jpg);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flip">
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>
+                </div>
             </div>
         </div>
     </div>
