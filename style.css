@@ -81,7 +81,18 @@ a:nth-child(2){
     border-radius: 10px;
     border: 1px solid silver;
 }
-
+.value {
+    height: 40px;
+}
+h2.label {
+    margin: 0;
+}
+img#reset {
+    margin-top: 40px;
+    width: 100px;
+    height: 140px;
+    border-radius: 100px;
+}
 .front{
     height: 105px;
     width: 70px;

@@ -11,7 +11,7 @@
             $('.container').click(function(){
                 $(this).find('.flip').addClass('flipped');
 
-                $('.reset').click(function(){
+                $('#reset').click(function(){
                     $('.flipped').removeClass('flipped');
                     $('.attempt .value').html("");
                     clickCount =0;
@@ -35,7 +35,7 @@
     <div id="stats">
         <div class="games-played">
             <h2 class="label">Games Played</h2>
-            <h4 class="value"></h4>
+            <div class="value"></div>
         </div>
         <div class="attempt">
             <div class="label">Attempts:</div>
@@ -45,7 +45,7 @@
             <div class="label">Accuracy:</div>
             <div class="value"></div>
         </div>
-        <button class="reset">Reset Game</button>
+        <img src="images/bonfire.jpg" id="reset">
     </div>
     <div id="row_container">
         <div class="row_health">
