@@ -7,21 +7,57 @@
     <script>
         var count = 1;
         var clickCount = 0;
-        $(document).ready(function(){
-            $('.container').click(function(){
-                $(this).find('.flip').addClass('flipped');
+        var first_card_clicked = null;
+        var second_card_clicked = null;
+        var total_possible_matches = 2;
+        var match_counter = 0;
 
-                $('#reset').click(function(){
+
+        $(document).ready(function(){
+
+            function card_clicked(){
+
+                $('.container').click(function() {
+                    $(this).find('.flip').addClass('flipped');
+                    if(first_card_clicked === null){
+                        console.log("first card clicked");
+                        first_card_clicked = $(this).find('.back').css('background-image');
+                    }
+                    else{
+                        console.log("second card clicked");
+                        second_card_clicked = $(this).find('.back').css('background-image');
+                    }
+                    checkMatch()
+                })
+            }
+            function checkMatch(){
+                if(first_card_clicked === second_card_clicked){
+                    console.log("they match");
+                    match_counter++;
+                    first_card_clicked = null;
+                    second_card_clicked = null;
+                }
+                else{
+                    console.log("they don't match");
+                }
+
+            }
+            card_clicked()
+
+            function resetGame() {
+                $('#reset').click(function () {
                     $('.flipped').removeClass('flipped');
                     $('.attempt .value').html("");
-                    clickCount =0;
+                    clickCount = 0;
                 });
                 clickCount++;
-                if(clickCount%2 === 0) {
+                if (clickCount % 2 === 0) {
                     $('.attempt .value').text(count++);
                 }
-            });
+            }
+            resetGame();
         });
+
 
     </script>
 </head>
@@ -61,14 +97,14 @@
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/artorias.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/artorias.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Brador.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Brador.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
@@ -79,28 +115,28 @@
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/artorias.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/artorias.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Brador.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Brador.jpg);"></div>-->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
@@ -117,52 +153,52 @@
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Logan.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Logan.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/quelaag.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/quelaag.jpg);"></div>-->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Oscar.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Oscar.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/quelaag.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/quelaag.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Oscar.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Oscar.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Logan.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Logan.jpg);"></div>-->
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <div class="face front"></div>
-                    <div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>
+                    <!--<div class="face front"></div>-->
+                    <!--<div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>-->
                 </div>
             </div>
         </div>

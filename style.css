@@ -79,7 +79,7 @@ a:nth-child(2){
     width: 70px;
     margin: 30px 0 30px 30px;
     border-radius: 10px;
-    border: 1px solid silver;
+
 }
 .value {
     height: 40px;
@@ -101,11 +101,12 @@ img#reset {
     border-radius: 10px;
     background-image: url("images/card_back.jpg");
     position: absolute;
+    border: 1px solid silver;
 }
 .back {
     height: 105px;
     width: 70px;
-
+    border: 1px solid silver;
     background-size: 70px 105px;
     border-radius: 10px;
     position: absolute;
