@@ -16,46 +16,59 @@
         $(document).ready(function(){
 
             function card_clicked(){
-
                 $('.container').click(function() {
                     $(this).find('.flip').addClass('flipped');
                     if(first_card_clicked === null){
-                        console.log("first card clicked");
                         first_card_clicked = $(this).find('.back').css('background-image');
+
                     }
                     else{
-                        console.log("second card clicked");
                         second_card_clicked = $(this).find('.back').css('background-image');
                     }
-                    checkMatch()
+                    clickCount++;
+                    if (clickCount % 2 === 0) {
+
+                        $('.attempt .value').text(count++);
+                        checkMatch();
+                        $('.accuracy .value').html(((match_counter)/(count/2))*100 + "%");
+                        first_card_clicked = null;
+                        second_card_clicked = null;
+                    }
+                    if(match_counter === total_possible_matches){
+                        setTimeout((function(){ alert("You Win!"); }, 400));
+                    }
                 })
             }
+
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked){
-                    console.log("they match");
+                    setTimeout(function(){ alert("They Match!"); }, 400);
                     match_counter++;
-                    first_card_clicked = null;
-                    second_card_clicked = null;
+
                 }
                 else{
-                    console.log("they don't match");
+                    $('.flipped').removeClass('flipped')
                 }
-
             }
-            card_clicked()
+
+
 
             function resetGame() {
                 $('#reset').click(function () {
                     $('.flipped').removeClass('flipped');
                     $('.attempt .value').html("");
-                    clickCount = 0;
+                    $('.accuracy .value').html("");
+                    count=1;
+                    clickCount=0;
+                    first_card_clicked = null;
+                    second_card_clicked = null;
                 });
-                clickCount++;
-                if (clickCount % 2 === 0) {
-                    $('.attempt .value').text(count++);
-                }
             }
+            card_clicked()
             resetGame();
+            if(match_counter === total_possible_matches){
+                alert("You Win!")
+            }
         });
 
 
@@ -97,14 +110,14 @@
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/artorias.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/artorias.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Brador.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Brador.jpg);"></div>
                 </div>
             </div>
             <div class="container">
@@ -115,28 +128,28 @@
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/artorias.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/artorias.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Brador.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Brador.jpg);"></div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Iosefka.jpg);"></div>
                 </div>
             </div>
             <div class="container">
@@ -153,52 +166,52 @@
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Logan.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Logan.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/quelaag.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/quelaag.jpg);"></div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Oscar.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Oscar.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/quelaag.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/quelaag.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Oscar.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Oscar.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Logan.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Logan.jpg);"></div>
                 </div>
             </div>
             <div class="container">
                 <div class="flip">
-                    <!--<div class="face front"></div>-->
-                    <!--<div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>-->
+                    <div class="face front"></div>
+                    <div class="face back" style="background-image: url(images/Ornstein.jpg);"></div>
                 </div>
             </div>
         </div>
