@@ -32,6 +32,10 @@
                 });
             }
 
+            function disableClick() {
+                $(".container").off('click');
+            }
+
             function cardDefault(){
                 first_card_clicked = null;
                 second_card_clicked = null;
@@ -46,15 +50,9 @@
                 cardDefault();
             }
 
-            function disableClick(){
-                $('.flipped').filter(function () {
-                    $(this).find('.back').off('click');
-                });
-            }
-
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked && match_counter < 8 ){
-                    setTimeout(function(){ alert("They Match!"); }, 300);
+                    setTimeout(function(){ alert("They Match!"); }, 400);
                     match_counter++;
                     cardDefault();
                 }
@@ -62,10 +60,10 @@
                     setTimeout(function () {
                         alert("They Don't Match!");
                     }, 300);
-                    setTimeout(flipBack, 301);
+                    setTimeout(flipBack, 401);
                 }
                 else {
-                    setTimeout(function(){ alert("You Win!!!"); }, 300);
+                    setTimeout(function(){ alert("You Win!!!"); }, 400);
                     games_played++;
                     $('.games-played .value').text(games_played);
                 }
@@ -82,6 +80,9 @@
                     first_card_clicked = null;
                     second_card_clicked = null;
                 });
+            }
+            if (first_card_clicked !== null){
+                $('#container').off('click');
             }
             card_clicked();
             resetGame();
