@@ -7,77 +7,79 @@ body{
     src: url(Moonlight_Shadow.ttf);
 }
 #header{
-    width: 850px;
-    height: 150px;
+    width: 100vw;
+    height: 20vh;
     background-color: #000000;
     position: relative;
 }
 a{
-    font-size: 25px;
+    font-size: 3vmin;
     text-decoration: none;
     left: 35px;
     color: blanchedalmond;
 }
 a:first-child{
     position: absolute;
-    top: 25px;
-    left: 32px;
+    top: 15%;
+    left: 8%;
 }
 a:nth-child(2){
     position: absolute;
-    top: 80px;
+    top: 60%;
 }
 #stats{
     margin-top: 0;
     margin-right: 20px;
     float: left;
-    width: 150px;
-    height: 585px;
+    width: 15vw;
+    height: 80vh;
     background-color: rgba(240,255,250,0.41);
     text-align: center;
     border-radius: 20px;
     box-sizing: border-box;
     padding: 20px;
+    font-size: 2vmin;
 }
 .row_health{
     padding-top: 15px;
     padding-left: 10px;
-    height: 60px;
-    width: 850px;
+    height: 10%;
+    width: 100%;
     box-sizing: border-box;
 
 }
 #row_container{
     background-image: url('images/background.jpg');
     background-size: cover;
-    background-position: -175px 0;
-    width: 850px;
+    background-position: -155px 0;
+    width: 100vw;
+    height: 80vh;
     border-radius: 0 0 10px 0;
 
 }
 #health{
-    height: 15px;
-    width: 350px;
+    height: 33%;
+    width: 40%;
     background-color: red;
-    margin: 0 0 10px 160px;
+    margin: 0 0 10px 20%;
     border: 2px solid #fff2fe;
 }
 #stamina{
-    margin: 10px 0 10px 160px;
-    height: 13px;
-    width: 225px;
+    margin: 10px 0 10px 20%;
+    height: 33%;
+    width: 25%;
     background-color: #1dc116;
     border: 2px solid #fff2fe;
 }
 .row{
-    height: 175px;
-    width: 825px;
+    height: 30%;
+    width: 100%;
 }
 .container {
     display: inline-block;
-    height: 105px;
-    width: 70px;
-    margin: 30px 0 30px 30px;
+    height: 60%;
+    width: 8%;
+    margin: 3% 0 3% 3%;
     border-radius: 10px;
 
 }
@@ -86,33 +88,35 @@ a:nth-child(2){
 }
 h2.label {
     margin: 0;
+    font-size: 3vmin;
 }
 img#reset {
-    margin-top: 40px;
-    width: 100px;
-    height: 140px;
+    margin-top: 30%;
+    width: 90%;
+    height: 25%;
     border-radius: 100px;
 }
 .front{
-    height: 105px;
-    width: 70px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    background-size: 70px 105px;
+    background-size: 100% 100%;
     border-radius: 10px;
     background-image: url("images/card_back.jpg");
     position: absolute;
     border: 1px solid silver;
 }
 .back {
-    height: 105px;
-    width: 70px;
+    height: 100%;
+    width: 100%;
     border: 1px solid silver;
-    background-size: 70px 105px;
+    background-size: 100% 100%;
     border-radius: 10px;
     position: absolute;
 }
 #banner {
-    height: 100px;
+    height: 70%;
+    width: 60%;
     margin-left: 200px;
     margin-top: 25px;
 }
@@ -143,6 +147,21 @@ img#reset {
 .container .flip .back{
     -webkit-transform: rotateY(-180deg);
 }
-.flipped{
-
+@media only screen and (min-width: 1000px) {
+    #row_container {
+        width: 1000px;
+    }
+    .row {
+        width: 1000px;
+    }
+    .row_health{
+        width: 1000px;
+    }
+    #stats{
+        width: 167px;
+    }
+    #header {
+        width: 1000px;
+    }
 }
+

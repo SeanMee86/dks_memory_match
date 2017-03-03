@@ -14,26 +14,28 @@
 
 
         $(document).ready(function(){
+            $("#backgroundMusic").get(0).play();
+
             function card_clicked(){
-                $('.container').click(function() {
-                    $(this).find('.flip').addClass('flipped');
+                $('.container').on('click', function() {
                     if(first_card_clicked === null){
+                        $(this).find('.flip').addClass('flipped');
                         first_card_clicked = $(this).find('.back').css('background-image');
+                        clickCount++;
                     }
                     else{
-                        second_card_clicked = $(this).find('.back').css('background-image');
+                        if (!$(this).find('.flip').hasClass('flipped')){
+                            $(this).find('.flip').addClass("flipped");
+                            second_card_clicked = $(this).find('.back').css('background-image');
+                            checkMatch();
+                        }
                     }
-                    clickCount++;
+
                     if (clickCount % 2 === 0) {
                         $('.attempt .value').text(count++);
-                        checkMatch();
                         $('.accuracy .value').html((((match_counter)/(clickCount/2))*100).toFixed(0) + "%");
                     }
                 });
-            }
-
-            function disableClick() {
-                $(".container").off('click');
             }
 
             function cardDefault(){
@@ -53,10 +55,12 @@
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked && match_counter < 8 ){
                     setTimeout(function(){ alert("They Match!"); }, 400);
+                    clickCount++;
                     match_counter++;
                     cardDefault();
                 }
                 else if (first_card_clicked !== second_card_clicked) {
+                    clickCount++;
                     setTimeout(function () {
                         alert("They Don't Match!");
                     }, 300);
@@ -77,12 +81,8 @@
                     count=1;
                     clickCount=0;
                     match_counter=0;
-                    first_card_clicked = null;
-                    second_card_clicked = null;
+                    cardDefault();
                 });
-            }
-            if (first_card_clicked !== null){
-                $('#container').off('click');
             }
             card_clicked();
             resetGame();
@@ -92,28 +92,30 @@
     </script>
 </head>
 <body>
+    <audio id="backgroundMusic" src="sounds/01-souls-of-fire.mp3" loop="loop"></audio>
     <div id="header">
         <a href="">Settings</a>
         <a href="about.html">About</a>
         <img src="images/dark_souls_banner.jpg" id="banner">
 
     </div>
-    <div id="stats">
-        <div class="games-played">
-            <h2 class="label">Games Played</h2>
-            <div class="value"></div>
-        </div>
-        <div class="attempt">
-            <div class="label">Attempts:</div>
-            <div class="value"></div>
-        </div>
-        <div class="accuracy">
-            <div class="label">Accuracy:</div>
-            <div class="value"></div>
-        </div>
-        <img src="images/bonfire.jpg" id="reset">
-    </div>
+
     <div id="row_container">
+        <div id="stats">
+            <div class="games-played">
+                <h2 class="label">Games Played</h2>
+                <div class="value"></div>
+            </div>
+            <div class="attempt">
+                <div class="label">Attempts:</div>
+                <div class="value"></div>
+            </div>
+            <div class="accuracy">
+                <div class="label">Accuracy:</div>
+                <div class="value"></div>
+            </div>
+            <img src="images/bonfire.jpg" id="reset">
+        </div>
         <div class="row_health">
             <div id="health"></div>
             <div id="stamina"></div>
