@@ -54,7 +54,7 @@
 
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked && match_counter < 8 ){
-                    setTimeout(function(){ alert("They Match!"); }, 400);
+                    setTimeout(function(){ alert("They Match!"); }, 200);
                     clickCount++;
                     match_counter++;
                     cardDefault();
@@ -63,8 +63,8 @@
                     clickCount++;
                     setTimeout(function () {
                         alert("They Don't Match!");
-                    }, 300);
-                    setTimeout(flipBack, 401);
+                    }, 200);
+                    setTimeout(flipBack, 301);
                 }
                 else {
                     setTimeout(function(){ alert("You Win!!!"); }, 400);
