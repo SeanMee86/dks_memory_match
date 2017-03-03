@@ -32,25 +32,36 @@
                         $('.attempt .value').text(count++);
                         checkMatch();
                         $('.accuracy .value').html((((match_counter)/(clickCount/2))*100).toFixed(0) + "%");
-                        first_card_clicked = null;
-                        second_card_clicked = null;
+
                     }
                 })
             }
+            function cardDefault(){
+                first_card_clicked = null;
+                second_card_clicked = null;
+            }
+            function flipBack() {
+                $('.flipped').filter(function () {
+                    var back = $(this).find('.back');
+                    var source = back.css('background-image');
+                    return source === first_card_clicked || source === second_card_clicked;
+                }).removeClass('flipped');
+                cardDefault();
 
+            }
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked && match_counter < 8 ){
                     setTimeout(function(){ alert("They Match!"); }, 400);
                     match_counter++;
+                    cardDefault();
+
                 }
-                //need to remove flipped class from element with class flipped that is a parent element of an element with class back and attribute value = to first and second card clicked
-                else if (first_card_clicked !== second_card_clicked){
-                    setTimeout(function(){ alert("They Don't Match!"); }, 400);
-                        $('.flipped').filter(function () {
-                            var back = $(this).find('.back');
-                            var source = back.css('background-image');
-                            return source === first_card_clicked || source === second_card_clicked;
-                        }).removeClass('flipped');
+                else if (first_card_clicked !== second_card_clicked) {
+                    setTimeout(function () {
+                        alert("They Don't Match!");
+                    }, 400);
+                    setTimeout(flipBack, 1000);
+                    //add off click handler and reapply?
                 }
                 else {
                     setTimeout(function(){ alert("You Win!!!"); }, 400);
