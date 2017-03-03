@@ -22,14 +22,12 @@
                     }
                     else{
                         second_card_clicked = $(this).find('.back').css('background-image');
-
                     }
                     clickCount++;
                     if (clickCount % 2 === 0) {
                         $('.attempt .value').text(count++);
                         checkMatch();
                         $('.accuracy .value').html((((match_counter)/(clickCount/2))*100).toFixed(0) + "%");
-
                     }
                 });
             }
@@ -53,14 +51,12 @@
                     setTimeout(function(){ alert("They Match!"); }, 400);
                     match_counter++;
                     cardDefault();
-
                 }
                 else if (first_card_clicked !== second_card_clicked) {
                     setTimeout(function () {
                         alert("They Don't Match!");
                     }, 400);
                     setTimeout(flipBack, 1000);
-                    //add off click handler and reapply?
                 }
                 else {
                     setTimeout(function(){ alert("You Win!!!"); }, 400);
