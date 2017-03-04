@@ -15,7 +15,18 @@
 
         $(document).ready(function(){
             $("#backgroundMusic").get(0).play();
-
+            //**********************************************************************************************************
+            function randomize(){
+                var imagesArray = ['images/artorias.jpg','images/brador.jpg','images/eileen.jpg','images/iosefka.jpg','images/lady_maria.jpg','images/logan.jpg','images/ornstein.jpg','images/oscar.jpg','images/quelaag.jpg'];
+                var randomArray =[];
+                for(var i=0;i<imagesArray.length+9;i++){
+                    var randomNumber = Math.floor(Math.random()*imagesArray.length);
+                    randomArray.push(imagesArray[randomNumber]);
+                    imagesArray.splice(randomNumber, 1);
+                }
+                return randomArray;
+            }
+            //**********************************************************************************************************
             function card_clicked(){
                 $('.container').on('click', function() {
                     if(first_card_clicked === null){
@@ -30,19 +41,18 @@
                             checkMatch();
                         }
                     }
-
                     if (clickCount % 2 === 0) {
                         $('.attempt .value').text(count++);
                         $('.accuracy .value').html((((match_counter)/(clickCount/2))*100).toFixed(0) + "%");
                     }
                 });
             }
-
+            //**********************************************************************************************************
             function cardDefault(){
                 first_card_clicked = null;
                 second_card_clicked = null;
             }
-
+            //**********************************************************************************************************
             function flipBack() {
                 $('.flipped').filter(function () {
                     var back = $(this).find('.back');
@@ -51,7 +61,7 @@
                 }).removeClass('flipped');
                 cardDefault();
             }
-
+            //**********************************************************************************************************
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked && match_counter < 8 ){
                     setTimeout(function(){ alert("They Match!"); }, 200);
@@ -64,28 +74,32 @@
                     setTimeout(function () {
                         alert("They Don't Match!");
                     }, 200);
-                    setTimeout(flipBack, 301);
+                    setTimeout(flipBack, 401);
                 }
                 else {
                     setTimeout(function(){ alert("You Win!!!"); }, 400);
-                    games_played++;
-                    $('.games-played .value').text(games_played);
+                    match_counter++;
+
                 }
             }
-
+            //**********************************************************************************************************
             function resetGame() {
                 $('#reset').click(function () {
                     $('.flipped').removeClass('flipped');
                     $('.attempt .value').html("");
                     $('.accuracy .value').html("");
                     count=1;
+                    games_played++;
+                    $('.games-played .value').text(games_played);
                     clickCount=0;
                     match_counter=0;
                     cardDefault();
                 });
             }
+            //**********************************************************************************************************
             card_clicked();
             resetGame();
+            console.log(randomize());
         });
 
 

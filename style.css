@@ -55,7 +55,6 @@ a:nth-child(2){
     width: 100vw;
     height: 80vh;
     border-radius: 0 0 10px 0;
-
 }
 #health{
     height: 33%;
@@ -91,7 +90,7 @@ h2.label {
     font-size: 3vmin;
 }
 img#reset {
-    margin-top: 30%;
+    margin-top: 40%;
     width: 90%;
     height: 25%;
     border-radius: 100px;
