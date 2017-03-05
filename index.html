@@ -14,7 +14,7 @@
 
 
         $(document).ready(function(){
-            $("#backgroundMusic").get(0).play();
+            //$("#backgroundMusic").get(0).play();
             //**********************************************************************************************************
             function randomizeBackground(){
                 var imagesArray = ['images/artorias.jpg','images/brador.jpg','images/eileen.jpg','images/iosefka.jpg','images/lady_maria.jpg','images/logan.jpg','images/ornstein.jpg','images/oscar.jpg','images/quelaag.jpg','images/artorias.jpg','images/brador.jpg','images/eileen.jpg','images/iosefka.jpg','images/lady_maria.jpg','images/logan.jpg','images/ornstein.jpg','images/oscar.jpg','images/quelaag.jpg'];
@@ -86,15 +86,15 @@
             //**********************************************************************************************************
             function checkMatch(){
                 if(first_card_clicked === second_card_clicked && match_counter < 8 ){
-                    setTimeout(function(){ alert("They Match!"); }, 200);
+                    //setTimeout(function(){ alert("They Match!"); }, 200);
                     clickCount++;
                     match_counter++;
                     cardDefault();
                 }
                 else if (first_card_clicked !== second_card_clicked) {
                     clickCount++;
-                    setTimeout(function () {alert("They Don't Match!");}, 200);
-                    setTimeout(flipBack, 400);
+                    //setTimeout(function () {alert("They Don't Match!");}, 200);
+                    setTimeout(flipBack, 800);
                 }
                 else {
                     setTimeout(function(){ alert("You Win!!!"); }, 400);
@@ -119,8 +119,6 @@
             applyBackground();
             card_clicked();
             resetGame();
-            console.log(randomizeSetOne()[0]);
-            console.log(randomizeSetTwo());
         });
 
 
@@ -152,8 +150,12 @@
             <img src="images/bonfire.jpg" id="reset">
         </div>
         <div class="row_health">
-            <div id="health"></div>
-            <div id="stamina"></div>
+            <div id="health_container">
+                <div id="health"></div>
+            </div>
+            <div id="stamina_container">
+                <div id="stamina"></div>
+            </div>
         </div>
         <div class="row">
             <div class="container">

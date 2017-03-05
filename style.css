@@ -56,19 +56,28 @@ a:nth-child(2){
     height: 80vh;
     border-radius: 0 0 10px 0;
 }
-#health{
+#health_container{
     height: 33%;
     width: 40%;
-    background-color: red;
     margin: 0 0 10px 20%;
     border: 2px solid #fff2fe;
 }
-#stamina{
+#health{
+    height: 100%;
+    width: 80%;
+    background-color: red;
+}
+#stamina_container{
     margin: 10px 0 10px 20%;
     height: 33%;
     width: 25%;
-    background-color: #1dc116;
     border: 2px solid #fff2fe;
+}
+#stamina{
+    height: 100%;
+    width: 80%;
+    background-color: #1dc116;
+
 }
 .row{
     height: 30%;
