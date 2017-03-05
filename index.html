@@ -16,7 +16,7 @@
         $(document).ready(function(){
             $("#backgroundMusic").get(0).play();
             //**********************************************************************************************************
-            function randomizeSetOne(){
+            function randomizeBackground(){
                 var imagesArray = ['images/artorias.jpg','images/brador.jpg','images/eileen.jpg','images/iosefka.jpg','images/lady_maria.jpg','images/logan.jpg','images/ornstein.jpg','images/oscar.jpg','images/quelaag.jpg','images/artorias.jpg','images/brador.jpg','images/eileen.jpg','images/iosefka.jpg','images/lady_maria.jpg','images/logan.jpg','images/ornstein.jpg','images/oscar.jpg','images/quelaag.jpg'];
                 var randomArray =[];
                 for(var i=0;i<18;i++){
@@ -26,7 +26,7 @@
                 }
                 return randomArray;
             }
-            var backgroundArray = randomizeSetOne();
+            var backgroundArray = randomizeBackground();
             //**********************************************************************************************************
             function applyBackground(){
                 $('#card1').css('background-image',"url("+backgroundArray[0]+")");
