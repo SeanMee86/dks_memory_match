@@ -51,7 +51,6 @@ a:nth-child(2){
 #row_container{
     background-image: url('images/background.jpg');
     background-size: cover;
-    background-position: -155px 0;
     width: 100vw;
     height: 80vh;
     border-radius: 0 0 10px 0;
