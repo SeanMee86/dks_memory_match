@@ -38,7 +38,7 @@ li{
     padding: 15% 5%;
     list-style-type: none;
     cursor: pointer;
-    margin: 20% 0;
+    margin: 35% 0;
 }
 .whatIs{
     position: absolute;
@@ -50,7 +50,7 @@ li{
 }
 .rules{
     position: absolute;
-    top: 25%;
+    top: 35%;
     font-size: 3vmin;
     color: blanchedalmond;
     font-family: darkFont, serif;
@@ -67,7 +67,7 @@ li{
 }
 .whatIs, .rules, .doYou {
     background-color: rgba(128,128,131,0.72);
-    width: 40%;
+    width: 50%;
     margin-left: 5%;
     border-radius: 10px;
     padding: 1%;
@@ -94,4 +94,15 @@ li{
     border-radius: 120px;
     float: left;
     margin-top: 1%;
+}
+@media only screen and (min-width: 1000px) {
+    #header {
+        width: 1000px;
+    }
+    #main-content {
+        width: 1000px;
+    }
+    #side-bar{
+        width: 200px;
+    }
 }

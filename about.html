@@ -25,7 +25,7 @@
             }
             function doYouClick() {
                 $('#doYou').click(function(){
-                    var doYouPopUp = $('<div>').addClass('doYou').html("<p>Praise the JavaScript, jQuery, HTML, and CSS!<img id='solaire' src='images/solaire.jpg' style='height:100px;float:right;'></p>");
+                    var doYouPopUp = $('<div>').addClass('doYou').html("<p>Praise the JavaScript, jQuery, HTML, and CSS!<img id='solaire' src='images/solaire.jpg' style='width:15%;float:right;border-radius: 100px;'></p>");
                     $('#main-content').append(doYouPopUp);
                     $('#doYou').mouseout(function(){
                         $('.doYou').remove();
