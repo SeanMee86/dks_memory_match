@@ -10,27 +10,86 @@ body{
     height: 20vh;
     width: 100vw;
     background-color: black;
+    box-sizing: border-box;
 }
 #main-content{
     height: 80vh;
     width: 100vw;
     background-image: url('images/background.jpg');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#header p{
+    font-family: darkFont,serif;
+    color: blanchedalmond;
+    font-size: 6vmin;
+    text-align: center;
+    margin-top:0;
+    padding-top: 4%;
 }
 ul{
     margin:0;
     padding: 25% 0 0 10%;
     font-size: 3vmin;
-    font-family: darkFont;
+    font-family: darkFont, serif;
     color: blanchedalmond;
 }
 li{
-    padding: 25% 0;
+    padding: 15% 5%;
     list-style-type: none;
+}
+.whatIs{
+    position: absolute;
+    top: 10%;
+    font-size: 3vmin;
+    color: blanchedalmond;
+    font-family: darkFont, serif;
+    display: inline-block;
+}
+.rules{
+    position: absolute;
+    top: 30%;
+    font-size: 3vmin;
+    color: blanchedalmond;
+    font-family: darkFont, serif;
+    display: inline-block;
+}
+.doYou{
+    position: absolute;
+    top: 50%;
+    font-size: 3vmin;
+    color: blanchedalmond;
+    font-family: darkFont, serif;
+    display: inline-block;
+}
+.whatIs, .rules, .doYou {
+    background-color: rgba(128,128,131,0.53);
+    width: 40%;
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 1%;
+
 }
 #side-bar {
     height: 100%;
     width: 25%;
     background-color: rgba(128,128,131,0.53);
     border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+
+}
+#profile{
+    width: 15%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 120px;
+}
+#chester{
+    height: 80%;
+    border-radius: 120px;
+    float: left;
+    margin-top: 1%;
 }

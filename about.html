@@ -2,9 +2,38 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="about.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            function rulesClick() {
+                $('#rules').click(function(){
+                var rulesPopUp = $('<div>').addClass('rules').html("<p>These are the rules.</p>");
+                $('#main-content').append(rulesPopUp);
+                })
+            }
+            function doYouClick() {
+                $('#doYou').click(function(){
+                var doYouPopUp = $('<div>').addClass('doYou').html("<p>These are the rules.</p>");
+                $('#main-content').append(doYouPopUp);
+                })
+            }
+            function whatIsClick() {
+                $('#whatIs').click(function(){
+                var whatIsPopUp = $('<div>').addClass('whatIs').html("<p>These are the rules.</p>");
+                $('#main-content').append(whatIsPopUp);
+                });
+            }
+            whatIsClick();
+            rulesClick();
+            doYouClick();
+        });
+    </script>
 </head>
 <body>
-    <div id="header"></div>
+    <div id="header">
+        <img id="chester" src="images/chester.jpg"><p>Welcome to the SoulsBorne Card Game</p>
+    </div>
     <div id="main-content">
         <div id="side-bar">
             <ul>
@@ -19,6 +48,7 @@
                 </li>
             </ul>
         </div>
+        <img id="profile" src="images/profile.jpg">
     </div>
 </body>
 </html>
