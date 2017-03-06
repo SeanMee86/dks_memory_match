@@ -42,7 +42,7 @@ li{
 }
 .whatIs{
     position: absolute;
-    top: 10%;
+    top: 5%;
     font-size: 3vmin;
     color: blanchedalmond;
     font-family: darkFont, serif;
@@ -50,12 +50,13 @@ li{
 }
 .rules{
     position: absolute;
-    top: 38%;
+    top: 25%;
     font-size: 3vmin;
     color: blanchedalmond;
     font-family: darkFont, serif;
     display: inline-block;
 }
+
 .doYou{
     position: absolute;
     top: 65%;
@@ -65,7 +66,7 @@ li{
     display: inline-block;
 }
 .whatIs, .rules, .doYou {
-    background-color: rgba(128,128,131,0.53);
+    background-color: rgba(128,128,131,0.72);
     width: 40%;
     margin-left: 5%;
     border-radius: 10px;

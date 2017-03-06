@@ -7,16 +7,16 @@
         $(document).ready(function() {
             function whatIsClick() {
                 $('#whatIs').click(function(){
-                    var whatIsPopUp = $('<div>').addClass('whatIs').html("<p>These are the rules.</p>");
+                    var whatIsPopUp = $('<div>').addClass('whatIs').html("<p>SoulsBorne is a series of games that includes Demon Souls, Dark Souls 1 2 & 3, and BloodBorne.  It is known for its difficulty and has sent many a player running for the hills. For those that can withstand the torment and abuse these games inflict on new players, they will find a game with deep lore and endless replayability.</p>");
                     $('#main-content').append(whatIsPopUp);
                     $('#whatIs').mouseout(function(){
                         $('.whatIs').remove();
-                    })
+                    });
                 });
             }
             function rulesClick() {
                 $('#rules').click(function(){
-                    var rulesPopUp = $('<div>').addClass('rules').html("<p>These are the rules.</p>");
+                    var rulesPopUp = $('<div>').addClass('rules').html("<p>This is just a simple memory match card game.  As you match cards you will learn a little more about the lore of Dark Souls… and maybe learn a little about the mechanics of the game as well…</p>");
                     $('#main-content').append(rulesPopUp);
                     $('#rules').mouseout(function(){
                         $('.rules').remove();
@@ -25,12 +25,12 @@
             }
             function doYouClick() {
                 $('#doYou').click(function(){
-                    var doYouPopUp = $('<div>').addClass('doYou').html("<p>These are the rules.</p>");
+                    var doYouPopUp = $('<div>').addClass('doYou').html("<p>Praise the JavaScript, jQuery, HTML, and CSS!<img id='solaire' src='images/solaire.jpg' style='height:100px;float:right;'></p>");
                     $('#main-content').append(doYouPopUp);
                     $('#doYou').mouseout(function(){
                         $('.doYou').remove();
-                    })
-                })
+                    });
+                });
             }
             whatIsClick();
             rulesClick();
