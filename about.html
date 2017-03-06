@@ -5,24 +5,32 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script>
         $(document).ready(function() {
-
+            function whatIsClick() {
+                $('#whatIs').click(function(){
+                    var whatIsPopUp = $('<div>').addClass('whatIs').html("<p>These are the rules.</p>");
+                    $('#main-content').append(whatIsPopUp);
+                    $('#whatIs').mouseout(function(){
+                        $('.whatIs').remove();
+                    })
+                });
+            }
             function rulesClick() {
                 $('#rules').click(function(){
-                var rulesPopUp = $('<div>').addClass('rules').html("<p>These are the rules.</p>");
-                $('#main-content').append(rulesPopUp);
-                })
+                    var rulesPopUp = $('<div>').addClass('rules').html("<p>These are the rules.</p>");
+                    $('#main-content').append(rulesPopUp);
+                    $('#rules').mouseout(function(){
+                        $('.rules').remove();
+                    });
+                });
             }
             function doYouClick() {
                 $('#doYou').click(function(){
-                var doYouPopUp = $('<div>').addClass('doYou').html("<p>These are the rules.</p>");
-                $('#main-content').append(doYouPopUp);
+                    var doYouPopUp = $('<div>').addClass('doYou').html("<p>These are the rules.</p>");
+                    $('#main-content').append(doYouPopUp);
+                    $('#doYou').mouseout(function(){
+                        $('.doYou').remove();
+                    })
                 })
-            }
-            function whatIsClick() {
-                $('#whatIs').click(function(){
-                var whatIsPopUp = $('<div>').addClass('whatIs').html("<p>These are the rules.</p>");
-                $('#main-content').append(whatIsPopUp);
-                });
             }
             whatIsClick();
             rulesClick();

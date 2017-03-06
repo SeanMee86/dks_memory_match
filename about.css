@@ -30,7 +30,6 @@ body{
 }
 ul{
     margin:0;
-    padding: 25% 0 0 10%;
     font-size: 3vmin;
     font-family: darkFont, serif;
     color: blanchedalmond;
@@ -38,6 +37,8 @@ ul{
 li{
     padding: 15% 5%;
     list-style-type: none;
+    cursor: pointer;
+    margin: 20% 0;
 }
 .whatIs{
     position: absolute;
@@ -49,7 +50,7 @@ li{
 }
 .rules{
     position: absolute;
-    top: 30%;
+    top: 38%;
     font-size: 3vmin;
     color: blanchedalmond;
     font-family: darkFont, serif;
@@ -57,7 +58,7 @@ li{
 }
 .doYou{
     position: absolute;
-    top: 50%;
+    top: 65%;
     font-size: 3vmin;
     color: blanchedalmond;
     font-family: darkFont, serif;
