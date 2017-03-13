@@ -6,6 +6,16 @@ body{
     font-family: darkFont;
     src: url(Moonlight_Shadow.ttf);
 }
+@keyframes staminaLoss {
+
+    100%{
+        width: 0;
+    }
+    0%{
+        width: 100%;
+    }
+
+}
 #header{
     width: 100vw;
     height: 20vh;
@@ -21,7 +31,7 @@ a{
 a:first-child{
     position: absolute;
     top: 15%;
-    left: 8%;
+    left: 6%;
 }
 a:nth-child(2){
     position: absolute;
@@ -74,8 +84,12 @@ a:nth-child(2){
 }
 #stamina{
     height: 100%;
-    width: 80%;
+    width: 100%;
     background-color: #1dc116;
+    animation-name: staminaLoss;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 20s;
 
 }
 .row{
@@ -154,21 +168,21 @@ img#reset {
 .container .flip .back{
     -webkit-transform: rotateY(-180deg);
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     #row_container {
-        width: 1000px;
+        width: 1200px;
     }
     .row {
-        width: 1000px;
+        width: 1200px;
     }
     .row_health{
-        width: 1000px;
+        width: 1200px;
     }
     #stats{
-        width: 167px;
+        width: 180px;
     }
     #header {
-        width: 1000px;
+        width: 1200px;
     }
 }
 

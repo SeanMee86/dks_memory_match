@@ -95,12 +95,12 @@ li{
     float: left;
     margin-top: 1%;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     #header {
-        width: 1000px;
+        width: 1200px;
     }
     #main-content {
-        width: 1000px;
+        width: 1200px;
     }
     #side-bar{
         width: 200px;
