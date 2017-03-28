@@ -70,31 +70,31 @@ $(document).ready(function(){
     //**********************************************************************************************************
     function audioPlay(){
         switch (first_card_clicked){
-            case 'url("http://localhost:63342/lfz/memory_match/images/artorias.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/artorias.jpg")':
                 $('#artorias').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/brador.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/brador.jpg")':
                 $('#brador').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/eileen.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/eileen.jpg")':
                 $('#eileen').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/iosefka.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/iosefka.jpg")':
                 $('#iosefka').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/lady_maria.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/lady_maria.jpg")':
                 $('#lady_maria').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/logan.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/logan.jpg")':
                 $('#logan').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/ornstein.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/ornstein.jpg")':
                 $('#ornstein').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/oscar.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/oscar.jpg")':
                 $('#oscar').get(0).play();
                 break;
-            case 'url("http://localhost:63342/lfz/memory_match/images/quelaag.jpg")':
+            case 'url("http://52.43.235.31/memory_match/images/quelaag.jpg")':
                 $('#quelaag').get(0).play();
                 break;
         }
