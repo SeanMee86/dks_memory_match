@@ -148,7 +148,7 @@ function takeDamage(n){
             $("#health").css('width','100%');
         }
     }
-    setTimeout(setNewHealth, 1000*n);
+    setTimeout(setNewHealth, 10000*n);
     if(n<=6){
         return takeDamage(n+1);
     }
