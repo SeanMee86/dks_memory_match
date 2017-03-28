@@ -8,11 +8,11 @@ body{
 }
 @keyframes staminaLoss {
 
-    100%{
-        width: 0;
-    }
     0%{
         width: 100%;
+    }
+    100%{
+        width: 0;
     }
 
 }
@@ -84,7 +84,7 @@ a:nth-child(2){
 }
 #stamina{
     height: 100%;
-    width: 100%;
+    /*width: 100%;*/
     background-color: #1dc116;
     animation-name: staminaLoss;
     animation-iteration-count: infinite;
