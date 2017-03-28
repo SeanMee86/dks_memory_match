@@ -73,7 +73,7 @@ a:nth-child(2){
 }
 #health{
     height: 100%;
-    width: 80%;
+    width: 100%;
     background-color: red;
 }
 #stamina_container{
@@ -89,7 +89,7 @@ a:nth-child(2){
     animation-name: staminaLoss;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-duration: 20s;
+    animation-duration: 10s;
 
 }
 .row{

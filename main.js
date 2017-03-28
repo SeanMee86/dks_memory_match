@@ -5,6 +5,7 @@ var second_card_clicked = null;
 var match_counter = 0;
 var games_played = 0;
 var canIflip = true;
+var i=0;
 
 
 $(document).ready(function(){
@@ -56,6 +57,13 @@ $(document).ready(function(){
         first_card_clicked = null;
         second_card_clicked = null;
         canIflip = true;
+    }
+    function decreaseHealth(){
+        var currentHealth = $("#health").css('width');
+        currentHealth = currentHealth.slice(0,currentHealth.length-2);
+        currentHealth = parseInt(currentHealth);
+        var damage = currentHealth * .4;
+        $("#health").css('width',currentHealth-damage);
     }
     //**********************************************************************************************************
     function flipBack() {
@@ -130,8 +138,14 @@ $(document).ready(function(){
             cardDefault();
         });
     }
+    function healthLoop(){
+        for (var i=1; i<=20; i++){
+            setTimeout(decreaseHealth, 1000*i);
+        }
+    }
     //**********************************************************************************************************
     applyBackground();
     card_clicked();
     resetGame();
+    healthLoop();
 });
