@@ -1,6 +1,9 @@
-body{
-    margin:0;
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
     font-family: darkFont;
+    background-color: #0b0603;
 }
 @font-face {
     font-family: darkFont;
@@ -21,6 +24,7 @@ body{
     height: 20vh;
     background-color: #000000;
     position: relative;
+    margin: auto;
 }
 a{
     font-size: 3vmin;
@@ -64,6 +68,7 @@ a:nth-child(2){
     width: 100vw;
     height: 80vh;
     border-radius: 0 0 10px 0;
+    margin: auto;
 }
 #health_container{
     height: 33%;
@@ -84,7 +89,6 @@ a:nth-child(2){
 }
 #stamina{
     height: 100%;
-    /*width: 100%;*/
     background-color: #1dc116;
 }
 .staminaAnimation{
@@ -137,10 +141,14 @@ img#reset {
     position: absolute;
 }
 #banner {
-    height: 70%;
+    position: relative;
+    /* height: 70%; */
     width: 60%;
-    margin-left: 200px;
-    margin-top: 25px;
+    /* margin-left: 200px; */
+    /* margin-top: 25px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .container{
     -webkit-perspective: 1000px;

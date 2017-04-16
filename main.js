@@ -133,6 +133,7 @@ function resetGame() {
         clickCount=0;
         match_counter=0;
         cardDefault();
+        $('#staminaAnimation').css('animation-name','staminaLoss');
     });
 }
 function takeDamage(n){
@@ -143,7 +144,6 @@ function takeDamage(n){
     function setNewHealth() {
         $("#health").css('width', currentHealth + 'px');
         if(n === 7){
-            alert("You Died");
             $("#stamina").removeClass('staminaAnimation');
             $("#health").css('width','100%');
         }
