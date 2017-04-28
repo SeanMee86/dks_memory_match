@@ -77,31 +77,31 @@ function flipBack() {
 //**********************************************************************************************************
 function audioPlay(){
     switch (first_card_clicked){
-        case 'url("images/artorias.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/artorias.jpg")':
             $('#artorias').get(0).play();
             break;
-        case 'url("images/brador.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/brador.jpg")':
             $('#brador').get(0).play();
             break;
-        case 'url("images/eileen.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/eileen.jpg")':
             $('#eileen').get(0).play();
             break;
-        case 'url("images/iosefka.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/iosefka.jpg")':
             $('#iosefka').get(0).play();
             break;
-        case 'url("images/lady_maria.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/lady_maria.jpg")':
             $('#lady_maria').get(0).play();
             break;
-        case 'url("images/logan.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/logan.jpg")':
             $('#logan').get(0).play();
             break;
-        case 'url("images/ornstein.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/ornstein.jpg")':
             $('#ornstein').get(0).play();
             break;
-        case 'url("images/oscar.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/oscar.jpg")':
             $('#oscar').get(0).play();
             break;
-        case 'url("images/quelaag.jpg")':
+        case 'url("http://dev.seanmeedev.com/darkSoulsCardGame/images/quelaag.jpg")':
             $('#quelaag').get(0).play();
             break;
     }
