@@ -33,26 +33,41 @@ function applyBackground(){
     }
 }
 //**********************************************************************************************************
+function isSoundPaused(audio){
+    var isSoundPaused;
+    for(var i=0; i<audio.length; i++){
+        if(audio[i].paused){
+            isSoundPaused = true;
+        }
+        else{
+            isSoundPaused = false;
+            break;
+        }
+    }
+    return isSoundPaused;
+}
 function card_clicked(){
     $('.container').on('click', function () {
-        if(!$(this).find('.flip').hasClass('flipped')) {
-            if (canIflip === true) {
-                if (first_card_clicked === null) {
-                    $(this).find('.flip').addClass('flipped');
-                    first_card_clicked = $(this).find('.back').css('background-image');
-                    clickCount++;
-                }
-                else {
-                    if (!$(this).find('.flip').hasClass('flipped')) {
-                        $(this).find('.flip').addClass("flipped");
-                        second_card_clicked = $(this).find('.back').css('background-image');
-                        canIflip = false;
-                        checkMatch();
+        if(isSoundPaused($('.dialogue'))) {
+            if (!$(this).find('.flip').hasClass('flipped')) {
+                if (canIflip === true) {
+                    if (first_card_clicked === null) {
+                        $(this).find('.flip').addClass('flipped');
+                        first_card_clicked = $(this).find('.back').css('background-image');
+                        clickCount++;
                     }
-                }
-                if (clickCount % 2 === 0) {
-                    $('.attempt .value').text(count++);
-                    $('.accuracy .value').html((((match_counter) / (clickCount / 2)) * 100).toFixed(0) + "%");
+                    else {
+                        if (!$(this).find('.flip').hasClass('flipped')) {
+                            $(this).find('.flip').addClass("flipped");
+                            second_card_clicked = $(this).find('.back').css('background-image');
+                            canIflip = false;
+                            checkMatch();
+                        }
+                    }
+                    if (clickCount % 2 === 0) {
+                        $('.attempt .value').text(count++);
+                        $('.accuracy .value').html((((match_counter) / (clickCount / 2)) * 100).toFixed(0) + "%");
+                    }
                 }
             }
         }
