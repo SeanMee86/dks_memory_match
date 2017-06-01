@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+p{
+    color: white;
+    font-family: 'Roboto', Avenir, sans-serif;
+    font-size: 28px;
+}
+a{
+    color: white;
+    font-family: 'Roboto', Avenir, sans-serif;
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}

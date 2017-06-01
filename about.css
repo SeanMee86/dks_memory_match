@@ -1,18 +1,25 @@
-@font-face {
-    font-family: darkFont;
-    src: url(Augusta-Shadow.ttf);
-}
-
 body{
     margin:0;
+    background-color: #0b0603;
+    height: 100vh;
+    width: 100vw;
+}
+a{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+a:hover{
+    cursor: pointer;
 }
 #header{
     height: 20vh;
     width: 100vw;
     background-color: black;
     box-sizing: border-box;
+    margin: auto;
 }
 #main-content{
+    margin: auto;
     height: 80vh;
     width: 100vw;
     background-image: url('images/background.jpg');
@@ -21,7 +28,7 @@ body{
     position: relative;
 }
 #header p{
-    font-family: darkFont,serif;
+    font-family: 'Roboto', Avenir, sans-serif;
     color: blanchedalmond;
     font-size: 6vmin;
     text-align: center;
@@ -30,47 +37,37 @@ body{
 }
 ul{
     margin:0;
-    font-size: 3vmin;
-    font-family: darkFont, serif;
+    padding: 20px;
+    font-size: 22px;
+    font-family: 'Roboto', Avenir, sans-serif;
     color: blanchedalmond;
 }
-li{
+li {
     padding: 15% 5%;
     list-style-type: none;
     cursor: pointer;
-    margin: 35% 0;
+    margin: 58% 0;
 }
 .whatIs{
-    position: absolute;
-    top: 5%;
-    font-size: 3vmin;
-    color: blanchedalmond;
-    font-family: darkFont, serif;
-    display: inline-block;
+    top: 10%;
 }
 .rules{
-    position: absolute;
-    top: 35%;
-    font-size: 3vmin;
-    color: blanchedalmond;
-    font-family: darkFont, serif;
-    display: inline-block;
+    top: 40%;
 }
-
 .doYou{
-    position: absolute;
-    top: 65%;
-    font-size: 3vmin;
-    color: blanchedalmond;
-    font-family: darkFont, serif;
-    display: inline-block;
+    top: 70%;
 }
-.whatIs, .rules, .doYou {
+.infoBox {
+    position: absolute;
     background-color: rgba(128,128,131,0.72);
     width: 50%;
     margin-left: 5%;
     border-radius: 10px;
     padding: 1%;
+    font-size: 2vmin;
+    color: blanchedalmond;
+    font-family: 'Roboto', Avenir, sans-serif;
+    display: inline-block;
 
 }
 #side-bar {
@@ -89,11 +86,12 @@ li{
     right: 0;
     border-radius: 120px;
 }
-#chester{
-    height: 80%;
-    border-radius: 120px;
-    float: left;
-    margin-top: 1%;
+.back {
+    left: 4%;
+    position: relative;
+    font-size: 3vmin;
+    font-family: 'Roboto', Avenir, sans-serif;
+    top: 38%;
 }
 @media only screen and (min-width: 1200px) {
     #header {
