@@ -6,10 +6,12 @@ var match_counter = 0;
 var games_played = 0;
 var canIflip = true;
 var i=0;
+var darkEnding = "https://www.youtube.com/embed/LrywuSxARcY?autoplay=1";
+var youDied = "https://www.youtube.com/embed/jtI_1SJMCb8?autoplay=1";
 
 
 $(document).ready(function(){
-    $("#backgroundMusic").get(0).play();
+    // $("#backgroundMusic").get(0).play();
     gameInit();
 });
 
@@ -122,36 +124,62 @@ function audioPlay(){
     }
 }
 //**********************************************************************************************************
+function playVideo(video){
+    $('iframe')[0].src=video;
+}
+function showModal(){
+    $('.modal').css("display","block");
+}
 function checkMatch(){
-    if(first_card_clicked === second_card_clicked && match_counter < 8 ){
+    if(first_card_clicked === second_card_clicked && match_counter < 8  ){
         audioPlay();
         clickCount++;
         match_counter++;
         cardDefault();
     }
     else if (first_card_clicked !== second_card_clicked) {
+        if(clickCount > 20){
+            showModal();
+            playVideo(youDied);
+        }
         clickCount++;
         setTimeout(flipBack, 800);
     }
-    else {
+    else{
         audioPlay();
         match_counter++;
+        var currentTrackLength;
+        for(var i=0;i<$('.dialogue').length; i++){
+            if(!$('.dialogue')[i].paused){
+                currentTrackLength = $('.dialogue')[i].duration*1000;
+            }
+        }
+        setTimeout(function() {
+            showModal();
+            playVideo(darkEnding);
+        },currentTrackLength);
     }
 }
 //**********************************************************************************************************
 function resetGame() {
-    $('#reset').click(function () {
-        $('.flipped').removeClass('flipped');
-        $('.attempt .value').html("");
-        $('.accuracy .value').html("");
-        count=1;
-        games_played++;
-        $('.games-played .value').text(games_played);
-        clickCount=0;
-        match_counter=0;
-        cardDefault();
-        $('#staminaAnimation').css('animation-name','staminaLoss');
-    });
+    $('.flipped').removeClass('flipped');
+    $('.attempt .value').html("");
+    $('.accuracy .value').html("");
+    count=1;
+    games_played++;
+    $('.games-played .value').text(games_played);
+    clickCount=0;
+    match_counter=0;
+    cardDefault();
+    $('#staminaAnimation').css('animation-name','staminaLoss');
+
+}
+function modalClose(){
+    $('.modal').click(function(){
+        $('.modal').css("display","none");
+        $('iframe')[0].src='';
+        resetGame();
+    })
 }
 function takeDamage(n){
     var maxHealth = $('#health').css('width');
@@ -174,6 +202,7 @@ function takeDamage(n){
 function gameInit(){
     applyBackground();
     card_clicked();
-    resetGame();
+    $('#reset').click(resetGame);
     takeDamage(1);
+    modalClose();
 }
