@@ -9,16 +9,6 @@ body {
     font-family: darkFont;
     src: url(Moonlight_Shadow.ttf);
 }
-@keyframes staminaLoss {
-
-    0%{
-        width: 100%;
-    }
-    100%{
-        width: 0;
-    }
-
-}
 #header{
     width: 100vw;
     height: 20vh;

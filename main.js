@@ -5,6 +5,7 @@ var second_card_clicked = null;
 var match_counter = 0;
 var games_played = 0;
 var canIflip = true;
+var mismatchesAllowed = 10;
 var i=0;
 var darkEnding = "https://www.youtube.com/embed/LrywuSxARcY?autoplay=1";
 var youDied = "https://www.youtube.com/embed/jtI_1SJMCb8?autoplay=1";
@@ -138,7 +139,9 @@ function checkMatch(){
         cardDefault();
     }
     else if (first_card_clicked !== second_card_clicked) {
-        if(clickCount > 20){
+        mismatchesAllowed--;
+        takeDamage(mismatchesAllowed);
+        if(mismatchesAllowed <= 0){
             showModal();
             playVideo(youDied);
         }
@@ -165,11 +168,13 @@ function resetGame() {
     $('.flipped').removeClass('flipped');
     $('.attempt .value').html("");
     $('.accuracy .value').html("");
-    count=1;
+    count = 1;
+    mismatchesAllowed = 10;
     games_played++;
+    $('#health').css("width","100%");
     $('.games-played .value').text(games_played);
-    clickCount=0;
-    match_counter=0;
+    clickCount = 0;
+    match_counter = 0;
     cardDefault();
     $('#staminaAnimation').css('animation-name','staminaLoss');
 
@@ -181,28 +186,14 @@ function modalClose(){
         resetGame();
     })
 }
-function takeDamage(n){
-    var maxHealth = $('#health').css('width');
-    maxHealth = maxHealth.slice(0,maxHealth.length-2);
-    maxHealth = parseInt(maxHealth);
-    var currentHealth = maxHealth - (maxHealth*(n/6));
-    function setNewHealth() {
-        $("#health").css('width', currentHealth + 'px');
-        if(n === 7){
-            $("#stamina").removeClass('staminaAnimation');
-            $("#health").css('width','100%');
-        }
-    }
-    setTimeout(setNewHealth, 10000*n);
-    if(n<=6){
-        return takeDamage(n+1);
-    }
+function takeDamage(mismatchCountdown){
+    var health = 10*mismatchCountdown;
+    $('#health').css("width",`${health}%`);
 }
 //**********************************************************************************************************
 function gameInit(){
     applyBackground();
     card_clicked();
     $('#reset').click(resetGame);
-    takeDamage(1);
     modalClose();
 }
