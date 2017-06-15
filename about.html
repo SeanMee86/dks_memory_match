@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="about.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            function whatIsClick() {
+                $('#whatIs').click(function(){
+                    var whatIsPopUp = $('<div>').addClass('whatIs infoBox').html("<p>SoulsBorne is a series of games that includes Demon Souls, Dark Souls 1 2 & 3, and BloodBorne.  It is known for its difficulty and has left many salty players in its path. For those that can withstand the torment and abuse these games inflict upon new players, they will find a game with deep lore and endless replayability.</p>");
+                    $('#main-content').append(whatIsPopUp);
+                    $('#whatIs').mouseout(function(){
+                        $('.whatIs').remove();
+                    });
+                });
+            }
+            function rulesClick() {
+                $('#rules').click(function(){
+                    var rulesPopUp = $('<div>').addClass('rules infoBox').html("<p>This is just a simple memory match card game.  As you match cards you will learn a little more about the lore of Dark Souls and maybe learn a little about the mechanics of the game as well.</p>");
+                    $('#main-content').append(rulesPopUp);
+                    $('#rules').mouseout(function(){
+                        $('.rules').remove();
+                    });
+                });
+            }
+            function doYouClick() {
+                $('#doYou').click(function(){
+                    var doYouPopUp = $('<div>').addClass('doYou infoBox').html("<p>Praise the JavaScript, jQuery, HTML, and CSS!<img id='solaire' src='images/solaire.jpg' style='width:15%;float:right;border-radius: 100px;'></p>");
+                    $('#main-content').append(doYouPopUp);
+                    $('#doYou').mouseout(function(){
+                        $('.doYou').remove();
+                    });
+                });
+            }
+            whatIsClick();
+            rulesClick();
+            doYouClick();
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="back"><a href="index.html">Back to Game</a></div><p>About this game</p>
+    </div>
+    <div id="main-content">
+        <div id="side-bar">
+            <ul>
+                <li id="whatIs">
+                    What is SoulsBorne?
+                </li>
+                <li id="rules">
+                    How does this game work?
+                </li>
+                <li id="doYou">
+                    Do you even....
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
