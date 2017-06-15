@@ -120,11 +120,22 @@ h2.label {
     margin: 0;
     font-size: 3vmin;
 }
-img#reset {
+div#reset {
+    color: blanchedalmond;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 3vmin;
     margin-top: 40%;
     width: 90%;
     height: 25%;
-    border-radius: 100px;
+    border-radius: 20px;
+    background-image: url('images/bonfire.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div#reset:hover{
+    cursor: pointer;
 }
 .front{
     height: 100%;
