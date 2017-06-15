@@ -9,6 +9,20 @@ body {
     font-family: darkFont;
     src: url(Moonlight_Shadow.ttf);
 }
+#desktopOnly{
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+    color: white;
+    padding-top: 200px;
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 3em;
+    background-color: rgb(100,100,100);
+    z-index: 3;
+}
 #header{
     width: 100vw;
     height: 20vh;
@@ -207,6 +221,11 @@ div#reset:hover{
     }
     #header {
         width: 1200px;
+    }
+}
+@media only screen and (max-device-width: 700px){
+    #desktopOnly{
+        display: block;
     }
 }
 
