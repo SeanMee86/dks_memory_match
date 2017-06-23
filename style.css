@@ -181,10 +181,15 @@ div#reset:hover{
 }
 .container{
     -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
     position: relative;
 }
 .container .flip.flipped{
     -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 .container .flip{
     width: 100%;
