@@ -94,33 +94,41 @@ function flipBack() {
 
 //**********************************************************************************************************
 function audioPlay(){
-    switch (first_card_clicked){
-        case 'url("https://seanmeedev.com/dks_memory_match/images/artorias.jpg")':
-            $('#artorias').get(0).play();
+    var url = first_card_clicked;
+    var characterJpgRemoveFront = url.substr(url.lastIndexOf('/') + 1);
+    var characterJpg = characterJpgRemoveFront.substr(0, characterJpgRemoveFront.length-2);
+    function playSound(card){
+        var sound = $(card).get(0);
+        sound.volume = 0.2;
+        return sound.play();
+    }
+    switch (characterJpg){
+        case 'artorias.jpg':
+            playSound('#artorias');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/brador.jpg")':
-            $('#brador').get(0).play();
+        case 'brador.jpg':
+            playSound('#brador');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/eileen.jpg")':
-            $('#eileen').get(0).play();
+        case 'eileen.jpg':
+            playSound('#eileen');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/iosefka.jpg")':
-            $('#iosefka').get(0).play();
+        case 'iosefka.jpg':
+            playSound('#iosefka');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/lady_maria.jpg")':
-            $('#lady_maria').get(0).play();
+        case 'lady_maria.jpg':
+            playSound('#lady_maria');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/logan.jpg")':
-            $('#logan').get(0).play();
+        case 'logan.jpg':
+            playSound('#logan');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/ornstein.jpg")':
-            $('#ornstein').get(0).play();
+        case 'ornstein.jpg':
+            playSound('#ornstein');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/oscar.jpg")':
-            $('#oscar').get(0).play();
+        case 'oscar.jpg':
+            playSound('#oscar');
             break;
-        case 'url("https://seanmeedev.com/dks_memory_match/images/quelaag.jpg")':
-            $('#quelaag').get(0).play();
+        case 'quelaag.jpg':
+            playSound('#quelaag');
             break;
     }
 }
