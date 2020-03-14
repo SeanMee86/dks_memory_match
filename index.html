@@ -3,12 +3,11 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="http://i.imgur.com/5DKiia4.png">
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="main.js"></script>
     <title>FromSoft Memory Match</title>
 </head>
 <body>
-    <div id="desktopOnly">Mobile version coming soon, please play on desktop for best experience.</div>
     <div class="modal">
         <iframe class="video" src="" width="560" height="420" frameborder="0"></iframe>
     </div>
@@ -22,11 +21,9 @@
     <audio class="dialogue" id="oscar" src="sounds/dialogue/oscar.mp3"></audio>
     <audio class="dialogue" id="quelaag" src="sounds/dialogue/quelaag.mp3"></audio>
     <div id="header">
-        <a href="settings.html">Settings</a>
-        <a href="about.html">About</a>
-        <img src="images/darksouls_banner.jpg" id="banner">
+        <img alt src="images/darksouls_banner.jpg" id="banner">
     </div>
-    <div id="row_container">
+    <div id="game_container">
         <div id="stats">
             <div class="games-played">
                 <h2 class="label">Games Played</h2>
@@ -43,125 +40,123 @@
             <div id="reset">Reset</div>
             <!--<img src="images/bonfire.jpg" id="reset">-->
         </div>
-        <div class="row_health">
-            <div id="health_container">
-                <div id="health"></div>
-            </div>
-            <div id="stamina_container">
-                <div id="stamina" class="staminaAnimation"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card1" class="face back"></div>
+        <div id="row_container">
+            <div class="row_health">
+                <div id="health_container">
+                    <div id="health"></div>
+                </div>
+                <div id="stamina_container">
+                    <div id="stamina" class="staminaAnimation"></div>
                 </div>
             </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card2" class="face back"></div>
+            <div class="row">
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card1" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card3" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card2" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card4" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card3" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card5" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card4" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card6" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card5" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card7" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card6" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card8" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card7" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card9" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card8" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card10" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card9" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card11" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card10" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card12" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card11" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card13" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card12" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card14" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card13" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card15" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card14" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card16" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card15" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card17" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card16" class="face back"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="face front"></div>
-                    <div id="card18" class="face back"></div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card17" class="face back"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="flip">
+                        <div class="face front"></div>
+                        <div id="card18" class="face back"></div>
+                    </div>
                 </div>
             </div>
         </div>
