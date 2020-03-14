@@ -1,33 +1,18 @@
 body {
     margin: 0;
-    width: 100vw;
-    height: 100vh;
-    font-family: darkFont;
-    background-color: #0b0603;
+    font-family: darkFont, serif;
+    background-image: url('images/back2.jpg');
+    background-size: cover;
 }
 @font-face {
     font-family: darkFont;
     src: url(Moonlight_Shadow.ttf);
 }
-#desktopOnly{
-    font-family: "Arial", sans-serif;
-    box-sizing: border-box;
-    color: white;
-    padding-top: 200px;
-    display: none;
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    font-size: 3em;
-    background-color: rgb(100,100,100);
-    z-index: 3;
-}
+
 #header{
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     background-color: #000000;
-    position: relative;
     margin: auto;
 }
 a{
@@ -59,39 +44,31 @@ a:nth-child(2){
     left: 50%;
     transform: translate(-50%,-50%);
 }
+#game_container {
+    display: flex;
+}
 #stats{
     margin-top: 0;
-    margin-right: 20px;
-    float: left;
     width: 15vw;
-    height: 80vh;
-    background-color: rgba(240,255,250,0.41);
+    height: 100vh;
+    background-color: rgba(240,255,250,0.4);
     text-align: center;
-    border-radius: 20px;
     box-sizing: border-box;
     padding: 20px;
-    font-size: 2vmin;
+    font-size: 1.4rem;
+    min-width: 180px;
 }
 .row_health{
-    padding-top: 15px;
-    padding-left: 10px;
+    padding-top: 10px;
     height: 10%;
     width: 100%;
     box-sizing: border-box;
-
-}
-#row_container{
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    width: 100vw;
-    height: 80vh;
-    border-radius: 0 0 10px 0;
-    margin: auto;
 }
 #health_container{
-    height: 33%;
+    height: 20px;
+    min-width: 300px;
     width: 40%;
-    margin: 0 0 10px 20%;
+    margin: 0 0 10px 30px;
     border: 2px solid #fff2fe;
 }
 #health{
@@ -100,8 +77,9 @@ a:nth-child(2){
     background-color: red;
 }
 #stamina_container{
-    margin: 10px 0 10px 20%;
-    height: 33%;
+    margin: 10px 0 10px 30px;
+    min-width: 187px;
+    height: 20px;
     width: 25%;
     border: 2px solid #fff2fe;
 }
@@ -115,17 +93,24 @@ a:nth-child(2){
     animation-timing-function: linear;
     animation-duration: 10s;
 }
+#row_container {
+    width: 85vw;
+}
 .row{
-    height: 30%;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 88%;
+    flex-wrap: wrap;
+    padding: 0 6%;
 }
 .container {
     display: inline-block;
-    height: 60%;
-    width: 8%;
-    margin: 3% 0 3% 3%;
+    width: 7vw;
+    height: 10vw;
+    margin: 2vw;
     border-radius: 10px;
-
+    min-width: 80px;
+    min-height: 130px;
 }
 .value {
     height: 40px;
@@ -171,10 +156,8 @@ div#reset:hover{
 }
 #banner {
     position: relative;
-    /* height: 70%; */
     width: 60%;
-    /* margin-left: 200px; */
-    /* margin-top: 25px; */
+    max-width: 600px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -206,26 +189,32 @@ div#reset:hover{
 .container .flip .back{
     -webkit-transform: rotateY(-180deg);
 }
-@media only screen and (min-width: 1200px) {
+
+@media screen and (max-width: 550px) {
+    #stats {
+        width: 100%;
+        height: unset;
+    }
+    #game_container {
+        flex-flow: column;
+    }
     #row_container {
-        width: 1200px;
+        width: 100%;
     }
-    .row {
-        width: 1200px;
+    div#reset {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 215px;
+        height: 150px;
     }
-    .row_health{
-        width: 1200px;
+    .games-played,
+    .accuracy,
+    .attempt {
+        display: flex;
+        justify-content: center;
     }
-    #stats{
-        width: 180px;
-    }
-    #header {
-        width: 1200px;
-    }
-}
-@media only screen and (max-device-width: 700px){
-    #desktopOnly{
-        display: block;
+    .value {
+        margin-left: 10px;
     }
 }
 
