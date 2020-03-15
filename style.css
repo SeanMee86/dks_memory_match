@@ -14,6 +14,7 @@ body {
     height: 20vh;
     background-color: #000000;
     margin: auto;
+    min-height: 110px;
 }
 a{
     font-size: 3vmin;
@@ -46,8 +47,9 @@ a:nth-child(2){
 }
 #game_container {
     display: flex;
+    max-width: 1245px;
 }
-#stats{
+#stats_container{
     margin-top: 0;
     width: 15vw;
     height: 100vh;
@@ -57,6 +59,7 @@ a:nth-child(2){
     padding: 20px;
     font-size: 1.4rem;
     min-width: 180px;
+    min-height: 600px;
 }
 .row_health{
     padding-top: 10px;
@@ -107,23 +110,25 @@ a:nth-child(2){
     display: inline-block;
     width: 7vw;
     height: 10vw;
-    margin: 2vw;
+    margin: 2.4%;
     border-radius: 10px;
     min-width: 80px;
     min-height: 130px;
+    max-width: 95px;
+    max-height: 135px;
 }
 .value {
     height: 40px;
 }
 h2.label {
     margin: 0;
-    font-size: 3vmin;
+    font-size: 1.4rem;
 }
 div#reset {
     color: blanchedalmond;
-    padding: 20px;
+    padding: 5px;
     box-sizing: border-box;
-    font-size: 3vmin;
+    font-size: 1.4rem;
     margin-top: 40%;
     width: 90%;
     height: 25%;
@@ -156,7 +161,7 @@ div#reset:hover{
 }
 #banner {
     position: relative;
-    width: 60%;
+    width: 100%;
     max-width: 600px;
     top: 50%;
     left: 50%;
@@ -191,9 +196,16 @@ div#reset:hover{
 }
 
 @media screen and (max-width: 550px) {
-    #stats {
+    #header {
+        height: 12vh;
+        min-height: unset;
+    }
+    #stats_container {
         width: 100%;
         height: unset;
+        display: flex;
+        justify-content: space-between;
+        min-height: unset;
     }
     #game_container {
         flex-flow: column;
@@ -202,8 +214,8 @@ div#reset:hover{
         width: 100%;
     }
     div#reset {
-        width: 100%;
-        margin: 0 auto;
+        width: 30%;
+        margin: 0;
         max-width: 215px;
         height: 150px;
     }
@@ -211,7 +223,6 @@ div#reset:hover{
     .accuracy,
     .attempt {
         display: flex;
-        justify-content: center;
     }
     .value {
         margin-left: 10px;
