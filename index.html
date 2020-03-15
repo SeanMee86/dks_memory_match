@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="http://i.imgur.com/5DKiia4.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -24,18 +25,20 @@
         <img alt src="images/darksouls_banner.jpg" id="banner">
     </div>
     <div id="game_container">
-        <div id="stats">
-            <div class="games-played">
-                <h2 class="label">Games Played</h2>
-                <div class="value"></div>
-            </div>
-            <div class="attempt">
-                <div class="label">Attempts:</div>
-                <div class="value"></div>
-            </div>
-            <div class="accuracy">
-                <div class="label">Accuracy:</div>
-                <div class="value"></div>
+        <div id="stats_container">
+            <div id="stats">
+                <div class="games-played">
+                    <h2 class="label">Games Played</h2>
+                    <div class="value"></div>
+                </div>
+                <div class="attempt">
+                    <div class="label">Attempts:</div>
+                    <div class="value"></div>
+                </div>
+                <div class="accuracy">
+                    <div class="label">Accuracy:</div>
+                    <div class="value"></div>
+                </div>
             </div>
             <div id="reset">Reset</div>
             <!--<img src="images/bonfire.jpg" id="reset">-->
